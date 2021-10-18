@@ -253,7 +253,7 @@ absl::Status TFLiteGPURunner::InitializeOpenCL(
       cl_options, std::move(graph_cl), builder));
 
 #endif  // __ANDROID__
-  return absl::OkStatus();
+  return mediapipe::UnimplementedError("OpenCL is only supported on Android currently.");
 }
 
 #ifdef __ANDROID__
